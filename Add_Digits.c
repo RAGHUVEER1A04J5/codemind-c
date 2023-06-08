@@ -1,21 +1,23 @@
 #include<stdio.h>
-int sum(int n)
-{
-    int sum=0;
-    while(n!=0)
-    {
-        sum=sum+n%10;
-        n=n/10;
-    }
-    return sum;
-}
 int main()
-{
-    int n,d;
-    scanf("%d",&n);
-    while(n>9)
+{    
+    long int num;
+    int sum = 0, rem;
+    scanf("%ld", &num);   
+
+    while(num / 10 != 0)
     {
-        n=sum(n);
+        sum = 0;
+        while(num != 0) 
+        {
+            rem = num % 10;  
+            sum += rem;      
+            num = num / 10;  
+        }
+
+        num = sum;
     }
-    printf("%d",n);
+
+    printf("%d", sum);
+
 }
