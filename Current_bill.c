@@ -1,60 +1,28 @@
+
 #include<stdio.h>
 int main()
 {
-    int unit;
-    float bill,sur;
-    scanf("%d",&unit);
-    if(unit<200)
-    {
-        bill=unit*1.20;
-        if(bill>400 && bill>100)
-        {
-            sur=bill*15/100;
-            printf("%.2f",bill+sur);
-        }
-        else
-        {
-            printf("%.2f",bill+100);
-        }
-    }
-    else if(unit>=200 && unit<400)
-    {
-        bill=unit*1.50;
-        if(bill>400 && bill>100)
-        {
-            sur=bill*15/100;
-            printf("%.2f",bill+sur);
-        }
-        else
-        {
-            printf("%.2f",bill+100);
-        }
-    }
-    else if(unit>=400 && unit<600)
-    {
-        bill=unit*1.80;
-        if(bill>400 && bill>100)
-        {
-            sur=bill*15/100;
-            printf("%.2f",bill+sur);
-        }
-        else
-        {
-            printf("%.2f",bill+100);
-        }
-    }
-    else if(unit>=600)
-    {
-        bill=unit*2.00;
-        if(bill>400 && bill>100)
-        {
-            sur=bill*15/100;
-            printf("%.2f",bill+sur);
-        }
-        else
-        {
-            printf("%.2f",bill+100);
-        }
-    }
-    return 0;
+    int u;
+    float uc,bill,tbill;
+    scanf("%d",&u);
+    if(u<200)
+    uc=1.20;
+    else if(u>=200&&u<400)
+    uc=1.50;
+    else if(u>=400&&u<600)
+    uc=1.80;
+    else
+    uc=2.00;
+     bill=u*uc;
+   if(bill>400)
+   {
+     tbill=bill+(bill*0.15);
+   }
+   else
+   {
+     tbill=bill+100;
+   }  
+     printf("%.2f",tbill);
+   
+   
 }
