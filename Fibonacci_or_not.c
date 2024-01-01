@@ -1,25 +1,26 @@
 #include<stdio.h>
 int main()
 {
-    int n,i,a=0,b=1,cnt=0,c;
+    int a=0,b=1,c,n,flag=0;
     scanf("%d",&n);
-    for(i=1;i<=n;i++)
+    c=a+b;
+    while(c<=n)
     {
-        c=a+b;
         if(c==n)
         {
-            cnt++;
+            flag=1;
             break;
         }
         a=b;
         b=c;
+        c=a+b;
     }
-    if(cnt==0)
+    if(flag==1)
     {
-        printf("False");
+        printf("True");
     }
     else
     {
-        printf("True");
+        printf("False");
     }
 }
